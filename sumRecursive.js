@@ -12,4 +12,4 @@ let sum = function (a){
 
 //let sum = a=>b => b ? sum(a+b):a;
 
-console.log(sum(2)(15)(30)(40)(60)());
+console.log(sum(2)(15)(30)(40)(60)(70));
