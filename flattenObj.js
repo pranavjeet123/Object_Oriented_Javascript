@@ -4,8 +4,8 @@ var givenObj = {
         "a": "2",
         "b": "3",
         "c": {
-            "d": "3",
-            "e": "1"
+            "d": "4",
+            "e": "5"
         }
     }
 };
@@ -35,3 +35,15 @@ function flattenObj(obj) {
 }
 
 flattenObj(givenObj);
+
+
+
+/**
+ * =============output =======
+ * {
+ * key1:1,
+ * key2.a:2,
+ * key2.b:3,
+ * key2.c.d:4,
+ * key2.c.e:5}
+ */
