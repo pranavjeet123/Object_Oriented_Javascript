@@ -33,3 +33,26 @@ const Vishnu = createAnotherfn("Vishnu", "chakra");
 Vishnu.attack = reusableFn.attack;
 
 Vishnu.attack();
+
+/**
+ * example 2
+ */
+
+ function createTaxCalculator(tax){
+     function calculateTax(amount){
+         return amount *tax;
+     }
+     return calculateTax;
+ }
+
+ const calculateVatAmount = createTaxCalculator(1.5);
+
+ const calculateIncomeAmount = createTaxCalculator(8);
+
+ console.log(calculateVatAmount(1000));
+ console.log(calculateIncomeAmount(1000));
+
+
+ /**
+  * Example 3
+  */
