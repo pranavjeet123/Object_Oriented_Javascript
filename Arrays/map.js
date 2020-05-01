@@ -39,3 +39,30 @@ let intArray=[];
  
 
 console.log(resultArray);
+
+/**
+ * add all zero's at one side of array 
+ * Sort other integers, including negatives
+ * output ======= [0, 0, 0, 0, 0, 0,1,2, 3, 5, 6,7,8, 9, 12];
+ */
+
+
+let givenArr =[0,-1,3,5,-6,0,0,0,0,0,9,12,2,7,8];
+let zeroArray=[];
+let intArray=[];
+ givenArr.map((item)=>{
+  if( item === 0){
+    zeroArray.push(item); 
+  }
+  else{
+    intArray.push(item);
+  }
+})
+   intArray.sort((a,b)=>{
+   return a-b;
+    })
+
+ let resultArray =[...zeroArray,...intArray]
+ 
+
+console.log(resultArray);
