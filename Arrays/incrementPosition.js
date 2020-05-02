@@ -6,37 +6,29 @@
 
 
 
-let arr1 = [123, 931];
-let arr2 = [821, 111];
+let arr1=[123,921,5681];
+let arr2=[821,111,9991];
 
-let count = 0;
-function counter(a, b) {
-    while (a < b) {
-        count++;
-        a++;
-    } while (a > b) {
-        count++
-        a--;
-
-    }
-    if (a === b) {
-        count = 0;
-    }
-    return count;
+let diff = (a,b)=>{
+  let itemDiff = a.toString().split("")
+  .map((aItem,i)=>{
+   
+    let bItemArr = b.toString().split("");
+    return aItem>bItemArr[i]? aItem-bItemArr[i]:bItemArr[i]-aItem;
+  })
+  .reduce((result,current)=>{
+    return result+current
+  },0);
+  return itemDiff;
 }
 
-let sum = 0;
-arr1.forEach((item) => {
+let resultData= arr1.map((aEle,aIndex)=>{
+  return diff(aEle,arr2[aIndex]);
+}).reduce((result,current)=>{
+  return result+current;
+},0)
 
-    let pos = arr1.indexOf(item);
-    let anotherItem = arr2[pos].toString().split("");
-    let aa = item.toString().split("");
-    for (let i = 0; i < aa.length; i++) {
-        sum = sum + counter(aa[i], anotherItem[i]);
-    }
-}
-)
-console.log(sum);
+console.log(resultData);
 
 
 
